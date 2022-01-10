@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+spring.datasource:
+  driver_class_name: com.mysql.jdbc.Driver
+  url: "jdbc:mysql://localhost:3306/component_data_jpa?allowPublicKeyRetrieval=true&useSSL=false"
+  username: attila
+  password: password

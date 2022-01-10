@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./index.css" rel="stylesheet">
+    <title> Components </title>
+</head>
+
+<body>
+<form action="component" method="post">
+    <input type="submit" value="Logout">
+</form>
+
+{{#each this}}
+    <div id="containerDiv">
+        <h3 class="category"> Category: {{category}} </h3>
+        <h4 class="model"> Model: {{model}} </h4>
+        <p class="releaseYear"> Release year: {{releaseYear}} </p>
+        <p class="price"> Price: {{price}}$ </p>
+        <p class="availability"> Availability: {{availability}} </p>
+    </div>
+{{/each}}
+</body>
+</html>

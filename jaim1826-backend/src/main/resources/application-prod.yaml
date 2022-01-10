@@ -1,0 +1,7 @@
+daoType: jdbc
+
+databaseUsername: attila
+databasePassword: password
+databaseURL: jdbc:mysql://localhost:3306/component_data?allowPublicKeyRetrieval=true&useSSL=false
+databaseDriver: com.mysql.cj.jdbc.Driver
+connectionPoolSize: 4

@@ -1,0 +1,11 @@
+plugins {
+    id 'application'
+}
+application {
+//    getMainClass().set('edu.bbte.idde.jaim1826.desktop.ComponentUI')
+    mainClass = 'edu.bbte.idde.jaim1826.desktop.ComponentUI'
+}
+
+dependencies {
+    implementation project(':jaim1826-backend')
+}

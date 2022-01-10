@@ -1,0 +1,5 @@
+include 'jaim1826-backend'
+include 'jaim1826-desktop'
+include 'jaim1826-web'
+include 'jaim1826-spring'
+

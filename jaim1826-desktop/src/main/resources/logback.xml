@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- appender with name STDOUT -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <!-- print format (using date, thread, level, logger name and message -->
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <appender name="LOGFILE" class="ch.qos.logback.core.FileAppender">
+        <!-- file name to use here (can be absolute) -->
+        <file>myLogFile.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} - %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <!-- named logger used by every class in our project -->
+    <logger name="edu.bbte.idde.jaim1826" level="debug" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <logger name="edu.bbte.idde.jaim1826" level="info" additivity="false">
+        <appender-ref ref="LOGFILE" />
+    </logger>
+
+    <!-- root logger (used by all else) -->
+    <root level="error">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
